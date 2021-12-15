@@ -15,7 +15,7 @@ import java.util.Optional;
  */
 public class OptionalTest {
     @Test
-    public void 没有使用Optional() {
+    public void noUseOptional() {
         System.out.println("测试guava---Splitter");
         User user = new User();
         //Java代码中最常见的链式调用
@@ -43,7 +43,7 @@ public class OptionalTest {
     }
 
     @Test
-    public void 使用Java8的Optional() {
+    public void useJava8Optional() {
         User user = null;
         String result = Optional.ofNullable(user)
                 .map(User::getAddress)
