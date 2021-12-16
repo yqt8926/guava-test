@@ -137,9 +137,9 @@ public class RangeTest {
     public void testRangeMap(){
         RangeMap<Integer,String> rangeMap = TreeRangeMap.create();
         rangeMap.put(Range.closed(1,2),"低危");
-        rangeMap.put(Range.closed(3,4),"中危");
         rangeMap.put(Range.closed(5,6),"高危");
-        rangeMap.put(Range.closed(7,8),"极高危");
+        rangeMap.put(Range.closed(3,8),"中危");
+        rangeMap.put(Range.closed(4,8),"极高危");
         System.out.println(rangeMap.get(5));
     }
 }

@@ -65,6 +65,7 @@ public class StringsTest {
 
     @Test
     public void testCharset(){
+        Charset.forName("UTF-8");
         Charset charsetForName = Charset.forName("UTF-8");
         Charset charset = Charsets.UTF_8;
         assertThat(charsetForName,equalTo(charset));

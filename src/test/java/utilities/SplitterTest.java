@@ -40,7 +40,8 @@ public class SplitterTest {
         System.out.println("测试String---split");
         String[] splitArray = sourceStr.split(",");
         List<String> splitList =Lists.newArrayList(splitArray);
-        System.out.println(splitList);//[, huimei, , cdss]
+//        splitList.forEach(System.out::println);
+        System.out.println(splitList.size());//[, huimei, , cdss]
     }
 
     /**
@@ -50,7 +51,7 @@ public class SplitterTest {
     public void testGuavaSplitterSplit(){
         System.out.println("测试guava---Splitter");
         List<String> splitList = Splitter.on(",").splitToList(sourceStr);
-        System.out.println(splitList);//[, huimei, , cdss, ]
+        System.out.println(splitList.size());//[, huimei, , cdss, ]
     }
 
     /**

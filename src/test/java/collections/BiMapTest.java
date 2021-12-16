@@ -29,7 +29,7 @@ public class BiMapTest {
         //key可以重复put
 //        biMap.put("com", "alibaba");
         //forcePut 可以让value重复put
-//        biMap.forcePut("company", "huimei");
+        biMap.forcePut("company", "huimei");
 //        biMap.forcePut("com", "alibaba");
         System.out.println(biMap);
     }

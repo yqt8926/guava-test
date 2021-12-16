@@ -25,8 +25,8 @@ public class TableTest {
     public void tesBasic(){
         Table<String,String,String> hashTable = HashBasedTable.create();
         hashTable.put("language","java","17");
-        hashTable.put("language","java","17");
-        hashTable.put("language","java","17");
+        hashTable.put("language","python","18");
+        hashTable.put("language","c++","19");
         System.out.println(hashTable);
     }
 

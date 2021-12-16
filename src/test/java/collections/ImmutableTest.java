@@ -19,7 +19,7 @@ public class ImmutableTest {
     @Test
     public void testGuavaImmutable1(){
         ImmutableList<String> imOflist=ImmutableList.of("peida","jerry","harry");
-//        imOflist.add("demo");
+        imOflist.add("demo");
         System.out.println("imlist："+imOflist);
     }
 

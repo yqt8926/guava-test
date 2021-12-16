@@ -55,7 +55,7 @@ public class ListsTest {
      */
     @Test
     public void testCharactersOf(){
-        ImmutableList<Character> result =  Lists.charactersOf("huimei");
+        ImmutableList<Character> result =  Lists.charactersOf("我们");
         result.forEach(System.out::println);
     }
 

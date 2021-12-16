@@ -73,8 +73,8 @@ public class JoinerTest {
     @Test
     public void testGuavaJoinerSkipNulls(){
         System.out.println("测试guava---Joiner");
-//        String joinresult = Joiner.on("#").join("huimei",null,"cdss","sentry");
-        String joinresult = Joiner.on("#").skipNulls().join(stringListWithNull);
+        String joinresult = Joiner.on("#").join("huimei",null,"cdss","sentry");
+//        String joinresult = Joiner.on("#").skipNulls().join(stringListWithNull);
         System.out.println(joinresult);
     }
 
@@ -141,7 +141,7 @@ public class JoinerTest {
     public void testGuavaJoinerOnMap() {
         System.out.println("测试guava---Joiner");
         /// MapJoiner 的使用，将 map 转换为字符串
-        String result = Joiner.on("; ").withKeyValueSeparator("=").join(stringMap);
+        String result = Joiner.on("; ").withKeyValueSeparator("-").join(stringMap);
         System.out.println("打印map集合：" + stringMap);
         System.out.println("打印map字符串：" + result);
     }

@@ -53,6 +53,32 @@ public class ObjectsTest {
             this.releaseDate = releaseDate;
         }
 
+//        @Override
+//        public boolean equals(Object o) {
+//            if (this == o) return true;
+//            if (o == null || getClass() != o.getClass()) return false;
+//
+//            Guava guava = (Guava) o;
+//
+//            return Objects.equal(this.manufacure,guava.manufacure)
+//                    &&Objects.equal(this.version,guava.version)
+//                    &&Objects.equal(this.releaseDate,guava.releaseDate);
+//        }
+//
+//        @Override
+//        public int hashCode() {
+//            return Objects.hashCode(this.manufacure,this.version,this.releaseDate);
+//        }
+//
+//        @Override
+//        public String toString() {
+//            return MoreObjects.toStringHelper(this).omitNullValues()
+//                    .add("manufacure",this.manufacure)
+//                    .add("version",this.version)
+//                    .add("releaseDate",this.releaseDate).toString();
+//        }
+
+
         @Override
         public boolean equals(Object o) {
             if (this == o) return true;
@@ -60,22 +86,19 @@ public class ObjectsTest {
 
             Guava guava = (Guava) o;
 
-            return Objects.equal(this.manufacure,guava.manufacure)
-                    &&Objects.equal(this.version,guava.version)
-                    &&Objects.equal(this.releaseDate,guava.releaseDate);
+            if (version != null ? !version.equals(guava.version) : guava.version != null) return false;
+            if (manufacure != null ? !manufacure.equals(guava.manufacure) : guava.manufacure != null) return false;
+            return releaseDate != null ? releaseDate.equals(guava.releaseDate) : guava.releaseDate == null;
         }
 
         @Override
         public int hashCode() {
-            return Objects.hashCode(this.manufacure,this.version,this.releaseDate);
-        }
-
-        @Override
-        public String toString() {
-            return MoreObjects.toStringHelper(this).omitNullValues()
-                    .add("manufacure",this.manufacure)
-                    .add("version",this.version)
-                    .add("releaseDate",this.releaseDate).toString();
+            int result = version != null ? version.hashCode() : 0;
+            result = 31 * result + (manufacure != null ? manufacure.hashCode() : 0);
+            result = 31 * result + (releaseDate != null ? releaseDate.hashCode() : 0);
+            return result;
         }
     }
+
+
 }
